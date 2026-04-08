@@ -5,6 +5,14 @@ class ContaCorrente
   public decimal saldo;
   public decimal limiteDebito;
 
+  public ContaCorrente(int _numeroIdentificacao, string _titular, decimal _saldo, decimal _limiteDebito)
+  {
+    this.numeroIdentificacao = _numeroIdentificacao;
+    this.titular = _titular;
+    this.saldo = _saldo;
+    this.limiteDebito = _limiteDebito;
+  }
+
   public bool Sacar(decimal valorSaque)
   {
     if (valorSaque > saldo + limiteDebito) return false;
@@ -18,7 +26,6 @@ class ContaCorrente
   {
     saldo += valorDeposito;
   }
-
 
   public bool TransferirPara(ContaCorrente contaDestino, decimal valorTransferencia)
   {
