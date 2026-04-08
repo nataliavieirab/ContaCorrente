@@ -1,5 +1,9 @@
 # Conta Corrente
 
+<p align="center">
+  <img src="./.docs/contacorrente.gif" />
+</p>
+
 ## Projeto
 
 Desenvolvido durante o curso Fullstack da [Academia do Programador](https://www.academiadoprogramador.net) 2026
