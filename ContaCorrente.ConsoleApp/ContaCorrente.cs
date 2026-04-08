@@ -1,7 +1,7 @@
 class ContaCorrente
 {
   public int numeroIdentificacao;
-  public string titular;
+  public string? titular;
   public decimal saldo;
   public decimal limiteDebito;
 
