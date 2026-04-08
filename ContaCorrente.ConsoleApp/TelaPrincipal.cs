@@ -4,7 +4,7 @@ class TelaPrincipal
   {
     Console.Clear();
     Console.WriteLine("===================================================");
-    Console.WriteLine($"Conta Corrente #{contaAcessada.numeroIdentificacao} de {contaAcessada.titular}");
+    Console.WriteLine($"---------- Conta Corrente #{contaAcessada.numeroIdentificacao} de {contaAcessada.titular} -----------");
     Console.WriteLine("===================================================");
     Console.WriteLine("1 - Saque");
     Console.WriteLine("2 - Depósito");
@@ -17,7 +17,7 @@ class TelaPrincipal
 
   public void ApresentarOperacaoSaque(ContaCorrente contaAcessada)
   {
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
     Console.Write("Digite o valor que deseja sacar (R$): ");
     decimal valorSaque = Convert.ToDecimal(Console.ReadLine());
 
@@ -25,31 +25,31 @@ class TelaPrincipal
 
     if (!conseguiuSacar)
     {
-      Console.WriteLine("-------------------------------------");
+      Console.WriteLine("---------------------------------------------------");
       Console.WriteLine("O valor do limite de débito foi ultrapassado!");
     }
     else
     {
-      Console.WriteLine("-------------------------------------");
+      Console.WriteLine("---------------------------------------------------");
       Console.WriteLine("O valor foi sacado com sucesso!");
     }
 
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
     Console.Write("Digite ENTER para continuar...");
     Console.ReadLine();
   }
 
   public void ApresentarOperacaoDeposito(ContaCorrente contaAcessada)
   {
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
     Console.Write("Digite o valor que deseja depositar (R$): ");
     decimal valorDeposito = Convert.ToDecimal(Console.ReadLine());
 
     contaAcessada.Depositar(valorDeposito);
 
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
     Console.WriteLine("O valor foi depositado com sucesso!");
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
 
     Console.Write("Digite ENTER para continuar...");
     Console.ReadLine();
@@ -57,7 +57,7 @@ class TelaPrincipal
 
   public void ApresentarOperacaoTransferencia(ContaCorrente contaAcessada, ContaCorrente contaDestino)
   {
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
     Console.Write("Digite o valor que deseja transferir (R$): ");
     decimal valorTransferencia = Convert.ToDecimal(Console.ReadLine());
 
@@ -65,16 +65,16 @@ class TelaPrincipal
 
     if (!sucesso)
     {
-      Console.WriteLine("-------------------------------------");
+      Console.WriteLine("---------------------------------------------------");
       Console.WriteLine($"Não foi possível transferir este valor de R${valorTransferencia}.");
-      Console.WriteLine("-------------------------------------");
+      Console.WriteLine("---------------------------------------------------");
+
     }
     else
     {
-      Console.WriteLine("-------------------------------------");
+      Console.WriteLine("---------------------------------------------------");
       Console.WriteLine($"O valor de R${valorTransferencia} foi tranferido com sucesso!");
-      Console.WriteLine("-------------------------------------");
-
+      Console.WriteLine("---------------------------------------------------");
     }
 
     Console.Write("Digite ENTER para continuar...");
@@ -85,9 +85,9 @@ class TelaPrincipal
   {
     decimal saldoAtual = contaAcessada.ObterSaldo();
 
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
     Console.WriteLine("O valor do saldo da conta é de (R$): " + saldoAtual);
-    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("---------------------------------------------------");
 
     Console.Write("Digite ENTER para continuar...");
     Console.ReadLine();
