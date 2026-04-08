@@ -3,13 +3,13 @@
   static void Main(string[] args)
   {
 
-    ContaCorrente tiago = new ContaCorrente(1, "Tiago", 400, 1200);
-    ContaCorrente rech = new ContaCorrente(2, "Rech", 12000, 1200);
+    ContaCorrente natalia = new ContaCorrente(1, "Natalia", 400, 1200);
+    ContaCorrente julia = new ContaCorrente(2, "Julia", 12000, 1200);
 
     TelaPrincipal tela = new TelaPrincipal();
 
-    ContaCorrente contaAcessada = tiago;
-    ContaCorrente contaDestino = rech;
+    ContaCorrente contaAcessada = natalia;
+    ContaCorrente contaDestino = julia;
 
     while (true)
     {
